@@ -1,7 +1,9 @@
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { getSortedProjectsData } from "../../lib/projects";
 import Date from "../../components/Date";
+import Layout from "../../components/Layout";
 
 export const getStaticProps = async () => {
   const allProjectsData = getSortedProjectsData();
@@ -14,12 +16,15 @@ export const getStaticProps = async () => {
 
 const Projects = ({ allProjectsData }) => {
   return (
-    <section>
+    <Layout>
+      <Head>
+        <title>All Projects</title>
+      </Head>
       <h1>My Projects</h1>
       {allProjectsData.map(({ id, date, title, logo }) => (
         <div key={id}>
           <Link href={`/projects/${id}`}>
-            <a> 
+            <a>
               <Image
                 src={logo}
                 height={144}
@@ -38,7 +43,7 @@ const Projects = ({ allProjectsData }) => {
           </small>
         </div>
       ))}
-    </section>
+    </Layout>
   );
 };
 

@@ -1,29 +1,41 @@
 import Head from "next/head";
-import Image from "next/image";
+import Layout from "../components/Layout";
 import Link from "next/link";
 
-
-export default function Home({ allProjectsData }) {
+export default function Home() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello World!</h1>
-      <section className="flex sm:justify-center space-x-4">
-        {[
-          ["Home", "/dashboard"],
-          ["About", "/about"],
-          ["Projects", "/projects"],
-          ["Skills", "/skills"]
-        ].map(([title, url]) => (
+    <Layout home>
+      <Head>
+        <title>Alexander Brooks</title>
+      </Head>
+      <Link href="/about">
+        <a>
           <div>
-            <Link
-              href={url}
-              className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
-            >
-              <a>{title}</a>
-            </Link>
+            <h2>About Me</h2>
           </div>
-        ))}
-      </section>
-    </>
+        </a>
+      </Link>
+      <Link href="/skills">
+        <a>
+          <div>
+            <h2>Skills & Technologies</h2>
+          </div>
+        </a>
+      </Link>
+      <Link href="/projects">
+        <a>
+          <div>
+            <h2>Projects</h2>
+          </div>
+        </a>
+      </Link>
+      <Link href="/contact">
+        <a>
+          <div>
+            <h2>Contact Me</h2>
+          </div>
+        </a>
+      </Link>
+    </Layout>
   );
 }
