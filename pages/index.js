@@ -10,8 +10,8 @@ export default function Home() {
       </Head>
       <Link href="/about">
         <a>
-          <div>
-            <h2>About Me</h2>
+          <div className="bg-primary-100 py-5 px-10 rounded-lg mb-5 hover:shadow-lg">
+            <h2 className="text-lg font-semibold">About Me</h2>
           </div>
         </a>
       </Link>

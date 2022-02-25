@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Layout = ({ children, home }) => {
   return (
-    <div className="dark:bg-black">
+    <div className="bg-primary-300 dark:bg-tertiary-500 overflow-hidden h-screen">
       <Header home={home} />
       <main className="flex flex-col items-center">{children}</main>
       {!home && (

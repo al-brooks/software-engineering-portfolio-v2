@@ -6,36 +6,35 @@ import { useEffect, useState } from "react";
 const Header = ({ home }) => {
   const [isToggled, setIsToggled] = useState(false);
 
-  // retain dark mode toggle cross site
+  // Load Dark Mode on Component/Page Loads
   useEffect(() => {
     let input = document.querySelector("input");
-    if (localStorage.getItem("theme") === "dark") {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
       setIsToggled(true);
       input.checked = true;
+      document.documentElement.classList.add("dark");
     } else {
       setIsToggled(false);
       input.checked = false;
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
+  // Load Dark Mode on Toggle Events
   const handleChange = () => {
     let checked = document.querySelector("input").checked;
 
     if (checked) {
       localStorage.setItem("theme", "dark");
       setIsToggled(true);
+      document.documentElement.classList.add("dark");
     } else {
       localStorage.setItem("theme", "light");
       setIsToggled(false);
-    }
-
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
       document.documentElement.classList.remove("dark");
     }
   };
@@ -52,7 +51,7 @@ const Header = ({ home }) => {
             alt="Alexander Brooks"
             className="rounded-full"
           />
-          <h1 className="my-10">Alexander Brooks</h1>
+          <h1 className="my-10 text-3xl">Alexander Brooks</h1>
         </>
       ) : (
         <>
@@ -70,35 +69,38 @@ const Header = ({ home }) => {
           </Link>
           <Link href="/">
             <a>
-              <h2>Alexander Brooks</h2>
+              <h2 className="my-8 text-xl">Alexander Brooks</h2>
             </a>
           </Link>
         </>
       )}
-      <div className={styles.toggleContainer}>
-        {isToggled ? (
-          <div className="mr-5">
+      {isToggled ? (
+        <div className={`${styles.toggleContainer} bg-tertiary-100`}>
+          <div className="mr-3">
             <Image src="/images/light-sun-final.png" height={35} width={35} />
           </div>
-        ) : (
-          <div className="mr-5">
-            <Image src="/images/dark-sun-final.png" height={35} width={35} />
-          </div>
-        )}
-        <label className={styles.toggle}>
-          <input type="checkbox" onChange={handleChange} />
-          <span className={`${styles.slider} ${styles.round}`}></span>
-        </label>
-        {isToggled ? (
-          <div className="ml-5">
+          <label className={styles.toggle}>
+            <input type="checkbox" onChange={handleChange} />
+            <span className={`${styles.slider} ${styles.round}`}></span>
+          </label>
+          <div className="ml-3">
             <Image src="/images/light-moon-final.png" height={23} width={35} />
           </div>
-        ) : (
-          <div className="ml-5">
+        </div>
+      ) : (
+        <div className={`${styles.toggleContainer} bg-primary-100`}>
+          <div className="mr-3">
+            <Image src="/images/dark-sun-final.png" height={35} width={35} />
+          </div>
+          <label className={styles.toggle}>
+            <input type="checkbox" onChange={handleChange} />
+            <span className={`${styles.slider} ${styles.round}`}></span>
+          </label>
+          <div className="ml-3">
             <Image src="/images/dark-moon-final.png" height={23} width={35} />
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };
