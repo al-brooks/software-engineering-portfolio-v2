@@ -40,7 +40,7 @@ const Header = ({ home }) => {
   };
 
   return (
-    <header className="flex flex-col items-center my-20">
+    <header className="flex flex-col items-center mt-20 mb-10">
       {home ? (
         <>
           <Image
@@ -51,7 +51,7 @@ const Header = ({ home }) => {
             alt="Alexander Brooks"
             className="rounded-full"
           />
-          <h1 className="my-10 text-3xl">Alexander Brooks</h1>
+          <h1 className="my-10 text-3xl dark:text-primary-100">Alexander Brooks</h1>
         </>
       ) : (
         <>
@@ -69,7 +69,7 @@ const Header = ({ home }) => {
           </Link>
           <Link href="/">
             <a>
-              <h2 className="my-8 text-xl">Alexander Brooks</h2>
+              <h2 className="my-8 text-xl dark:text-primary-100">Alexander Brooks</h2>
             </a>
           </Link>
         </>

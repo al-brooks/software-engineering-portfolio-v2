@@ -3,14 +3,29 @@ import Header from "./Header";
 import Link from "next/link";
 
 const Layout = ({ children, home }) => {
+  const layoutClasses = [
+    "bg-primary-300",
+    "dark:bg-tertiary-500",
+    "overflow-scroll",
+    "h-screen"
+  ];
+  
+  const backBtnClasses = [
+    "mx-10",
+    "p-2",
+    "hover:text-highlight",
+    "dark:text-primary-100",
+    "dark:hover:text-highlight"
+  ]
+
   return (
-    <div className="bg-primary-300 dark:bg-tertiary-500 overflow-hidden h-screen">
+    <div className={layoutClasses.join(" ")}>
       <Header home={home} />
       <main className="flex flex-col items-center">{children}</main>
       {!home && (
         <div>
           <Link href="/">
-            <a>← Back to home</a>
+            <a className={backBtnClasses.join(" ")}>← Back to home</a>
           </Link>
         </div>
       )}

@@ -42,7 +42,8 @@ module.exports = {
         500: "#e7a132"
       },
       error: "#d32752",
-      info: "#f6c31c"
+      info: "#f6c31c",
+      highlight: "#66a3ff"
     },
     extend: {}
   },
