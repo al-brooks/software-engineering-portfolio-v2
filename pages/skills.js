@@ -18,24 +18,38 @@ const Skills = () => {
     { name: "MongoDB", image: "/images/mongodb-logo.png" },
     { name: "Mongoose", image: "/images/mongoose-logo.jpg" }
   ];
+
+  const sectionClasses = [
+      "mb-10",
+    "flex",
+    "flex-col",
+    "justify-center",
+    "items-center",
+    "text-center",
+    "dark:text-primary-100"
+  ];
+
   return (
     <Layout>
       <Head>
         <title>Skills & Technologies</title>
       </Head>
-      <section className="flex flex-wrap w-1/2">
-        {skills.map((skill) => {
-          return (
-            <div key={skill.name} className="flex flex-col items-center mx-5">
-              <h4 className="my-5">{skill.name}</h4>
-              {skill.name === "Mongoose" ? (
-                <Image src={skill.image} height={100} width={200} />
-              ) : (
-                <Image src={skill.image} height={100} width={110} />
-              )}
-            </div>
-          );
-        })}
+      <section className={sectionClasses.join(" ")}>
+        <h1>Skills & Technologies</h1>
+        <div className="w-5/6 flex flex-wrap justify-center">
+          {skills.map((skill) => {
+            return (
+              <div key={skill.name} className="flex flex-col items-center mx-5">
+                <h4 className="my-5">{skill.name}</h4>
+                {skill.name === "Mongoose" ? (
+                  <Image src={skill.image} height={50} width={150} />
+                ) : (
+                  <Image src={skill.image} height={70} width={70} />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </section>
     </Layout>
   );
