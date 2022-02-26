@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Layout = ({ children, home }) => {
   const layoutClasses = [
-    "bg-primary-300",
+    "bg-primary-400",
     "dark:bg-tertiary-500",
     "text-tertiary-300",
     "dark:text-primary-100",
@@ -15,7 +15,9 @@ const Layout = ({ children, home }) => {
 
   const backBtnClasses = [
     "mx-10",
+    "mb-10",
     "p-2",
+    "text-xl",
     "hover:text-highlight",
     "dark:text-primary-100",
     "dark:hover:text-highlight"
@@ -26,7 +28,7 @@ const Layout = ({ children, home }) => {
       <Header home={home} />
       <main className="flex flex-col items-center">{children}</main>
       {!home && (
-        <div>
+        <div className="flex flex-col items-center">
           <Link href="/">
             <a className={backBtnClasses.join(" ")}>← Back to home</a>
           </Link>

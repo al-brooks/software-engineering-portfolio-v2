@@ -34,8 +34,8 @@ const Skills = () => {
         <title>Skills & Technologies</title>
       </Head>
       <section className={sectionClasses.join(" ")}>
-        <h1 className="text-2xl underline">Skills & Technologies</h1>
-        <div className="w-5/6 flex flex-wrap justify-center">
+        <h1 className="text-2xl mb-5">Skills & Technologies</h1>
+        <div className="w-5/6 lg:w-3/4 flex flex-wrap justify-center">
           {skills.map((skill) => {
             return (
               <div key={skill.name} className="flex flex-col items-center mx-5">

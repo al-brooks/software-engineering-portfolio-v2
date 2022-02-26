@@ -15,34 +15,64 @@ export const getStaticProps = async () => {
 };
 
 const Projects = ({ allProjectsData }) => {
+  const projectCardClasses = [
+    "mb-20",
+    "sm:mb-15",
+    "sm:mx-2",
+    "md:mx-8",
+    "h-60",
+    "w-60",
+    "text-center"
+  ];
+
+  const projectImage = [
+    "h-3/4",
+    "w-3/4",
+    "mx-auto",
+    "relative",
+    "rounded-lg",
+    "overflow-hidden",
+    "hover:shadow-md",
+    "hover:shadow-tertiary-300",
+    "dark:hover:shadow-sm",
+    "dark:hover:shadow-primary-100"
+  ]
   return (
     <Layout>
       <Head>
         <title>All Projects</title>
       </Head>
-      <h1>My Projects</h1>
-      {allProjectsData.map(({ id, date, title, logo }) => (
-        <div key={id}>
-          <Link href={`/projects/${id}`}>
-            <a>
-              <Image
-                src={logo}
-                height={144}
-                width={144}
-                alt={`${title} logo`}
-                className={"bg-black"}
-              />
-            </a>
-          </Link>
-          <br />
-          <span>{title}</span>
-          <br />
-          <small>
-            {/* {date} */}
-            <Date dateString={date} />
-          </small>
+      <section className="flex flex-col items-center my-10">
+        <h1 className="mb-10 text-2xl">My Projects</h1>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center">
+          {allProjectsData.map(({ id, date, title, logo }) => (
+            <div
+              className={projectCardClasses.join(" ")}
+              key={id}
+            >
+              <Link href={`/projects/${id}`}>
+                <a>
+                  <div className={projectImage.join(" ")}>
+                    <Image
+                      src={logo}
+                      // height={160}
+                      // width={160}
+                      layout="fill"
+                      alt={`${title} logo`}
+                    />
+                  </div>
+                </a>
+              </Link>
+              <br />
+              <span className="text-lg font-bold">{title}</span>
+              <br />
+              <span className="text-md">
+                <Date dateString={date} />
+              </span>
+            </div>
+          ))}
         </div>
-      ))}
+      </section>
     </Layout>
   );
 };
