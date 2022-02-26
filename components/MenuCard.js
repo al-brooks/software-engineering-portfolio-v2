@@ -8,7 +8,6 @@ const MenuCard = ({ option, url }) => {
     "px-10",
     "rounded-lg",
     "bg-primary-100",
-    "hover:shadow-sm",
     "hover:bg-tertiary-100",
     "hover:text-primary-100",
     "dark:bg-tertiary-100",

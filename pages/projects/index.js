@@ -20,23 +20,27 @@ const Projects = ({ allProjectsData }) => {
     "sm:mb-15",
     "sm:mx-2",
     "md:mx-8",
-    "h-60",
+    "h-80",
     "w-60",
-    "text-center"
+    "text-center",
+    "bg-primary-100",
+    "dark:bg-tertiary-100",
+    "hover:bg-tertiary-100",
+    "hover:text-primary-100",
+    "dark:hover:bg-primary-100",
+    "dark:hover:text-tertiary-100",
+    "rounded-xl",
+    "flex flex-col justify-center"
   ];
 
-  const projectImage = [
-    "h-3/4",
-    "w-3/4",
+  const projectLogo = [
+    "h-40",
+    "w-40",
     "mx-auto",
     "relative",
     "rounded-lg",
-    "overflow-hidden",
-    "hover:shadow-md",
-    "hover:shadow-tertiary-300",
-    "dark:hover:shadow-sm",
-    "dark:hover:shadow-primary-100"
-  ]
+    "overflow-hidden"
+  ];
   return (
     <Layout>
       <Head>
@@ -46,29 +50,20 @@ const Projects = ({ allProjectsData }) => {
         <h1 className="mb-10 text-2xl">My Projects</h1>
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center">
           {allProjectsData.map(({ id, date, title, logo }) => (
-            <div
-              className={projectCardClasses.join(" ")}
-              key={id}
-            >
+            <div className={projectCardClasses.join(" ")} key={id}>
               <Link href={`/projects/${id}`}>
                 <a>
-                  <div className={projectImage.join(" ")}>
-                    <Image
-                      src={logo}
-                      // height={160}
-                      // width={160}
-                      layout="fill"
-                      alt={`${title} logo`}
-                    />
+                  <div className={projectLogo.join(" ")}>
+                    <Image src={logo} layout="fill" alt={`${title} logo`} />
                   </div>
+                  <br />
+                  <span className="text-lg font-black">{title}</span>
+                  <br />
+                  <span className="text-md">
+                    <Date dateString={date} />
+                  </span>
                 </a>
               </Link>
-              <br />
-              <span className="text-lg font-bold">{title}</span>
-              <br />
-              <span className="text-md">
-                <Date dateString={date} />
-              </span>
             </div>
           ))}
         </div>

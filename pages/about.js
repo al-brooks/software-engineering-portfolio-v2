@@ -3,11 +3,14 @@ import Layout from "../components/Layout";
 const About = () => {
   const paragraphClasses = [
     "py-5",
-    "px-10",
+    "px-4",
     "mb-10",
-    "w-3/4",
+    "w-11/12",
+    "sm:w-3/4",
     "md:w-1/2",
-    "rounded-lg",
+    "xl:w-1/3",
+    "lg:text-lg",
+    "xl:text-xl",
     "bg-primary-100",
     "dark:bg-tertiary-100"
   ];

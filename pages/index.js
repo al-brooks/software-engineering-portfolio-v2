@@ -9,11 +9,10 @@ export default function Home() {
       <Head>
         <title>Alexander Brooks</title>
       </Head>
-      <nav className="flex flex-col text-center">
+      <nav className="mb-5 flex flex-col text-center">
         <MenuCard option={"About Me"} url={"/about"} />
         <MenuCard option={"Skills & Technologies"} url={"/skills"} />
         <MenuCard option={"Projects"} url={"/projects"} />
-        <MenuCard option={"Contact Me"} url={"/contact"} />
       </nav>
     </Layout>
   );

@@ -32,9 +32,9 @@ const Footer = () => {
 
   return (
     <footer className={footerClasses.join(" ")}>
-      <section className="flex flex-row items-center">
+      <section className="flex flex-col items-center">
         <h1 className="text-xl font-bold">Contact:</h1>
-        <ContactInfo size={30} />
+        <ContactInfo size={40} />
       </section>
       <section>
         <h1>Powered by: NextJS and TailwindCSS</h1>

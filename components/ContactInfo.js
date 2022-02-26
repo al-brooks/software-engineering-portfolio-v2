@@ -3,7 +3,7 @@ import Image from "next/image";
 const ContactInfo = ({ size }) => {
   const imageClasses = ["ml-3","p-2","hover:shadow-md", "hover:shadow-tertiary-300", "dark:hover:shadow-sm","dark:hover:shadow-primary-100"];
   return (
-    <div className="flex flex-row flex-wrap items-center my-5">
+    <div className="flex flex-row flex-wrap items-center my-2">
       <a
         href="mailto:alexanderlawbrooks@gmail.com"
         className={imageClasses.join(" ")}
