@@ -25,8 +25,7 @@ const Skills = () => {
     "flex-col",
     "justify-center",
     "items-center",
-    "text-center",
-    "dark:text-primary-100"
+    "text-center"
   ];
 
   return (
@@ -35,12 +34,12 @@ const Skills = () => {
         <title>Skills & Technologies</title>
       </Head>
       <section className={sectionClasses.join(" ")}>
-        <h1>Skills & Technologies</h1>
+        <h1 className="text-2xl underline">Skills & Technologies</h1>
         <div className="w-5/6 flex flex-wrap justify-center">
           {skills.map((skill) => {
             return (
               <div key={skill.name} className="flex flex-col items-center mx-5">
-                <h4 className="my-5">{skill.name}</h4>
+                <h4 className="my-5 font-bold">{skill.name}</h4>
                 {skill.name === "Mongoose" ? (
                   <Image src={skill.image} height={50} width={150} />
                 ) : (

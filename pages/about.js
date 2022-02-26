@@ -8,8 +8,7 @@ const About = () => {
     "w-5/6",
     "rounded-lg",
     "bg-primary-100",
-    "dark:bg-tertiary-100",
-    "dark:text-primary-100"
+    "dark:bg-tertiary-100"
   ];
   return (
     <Layout>
