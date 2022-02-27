@@ -50,7 +50,14 @@ const Project = ({ projectData }) => {
     "dark:bg-tertiary-100"
   ];
 
-  const projectLogo = ["mx-auto", "relative", "rounded-lg", "overflow-hidden"];
+  const projectLogo = [
+    "h-20",
+    "w-20",
+    "mx-auto",
+    "relative",
+    "rounded-lg",
+    "overflow-hidden"
+  ];
 
   const h2Classes = ["mt-5", "text-xl", "font-black"];
 
@@ -101,13 +108,13 @@ const Project = ({ projectData }) => {
             <Link href={liveCode}>
               <a>
                 <div className={projectLogo.join(" ")}>
-                  <Image src={logo} height={60} width={60} />
+                  <Image src={logo} layout="fill" alt={`${title} logo`} />
                 </div>
               </a>
             </Link>
             <Link href={gitHub}>
               <a className="ml-5">
-                <Image src="/images/github.png" height={60} width={60} />
+                <Image src="/images/github.png" height={80} width={80} />
               </a>
             </Link>
           </nav>

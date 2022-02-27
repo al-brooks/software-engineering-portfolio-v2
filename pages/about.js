@@ -8,7 +8,7 @@ const About = () => {
     "w-11/12",
     "sm:w-3/4",
     "md:w-1/2",
-    "xl:w-1/3",
+    "xl:w-2/5",
     "lg:text-lg",
     "xl:text-xl",
     "bg-primary-100",

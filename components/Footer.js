@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <footer className={footerClasses.join(" ")}>
       <section className="flex flex-col items-center">
-        <h1 className="text-xl font-bold">Contact:</h1>
+        <h1 className="text-xl font-bold">Let's Chat:</h1>
         <ContactInfo size={40} />
       </section>
       <section>
