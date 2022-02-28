@@ -21,7 +21,7 @@ const About = () => {
       <section className="flex flex-col items-center">
         <h1 className="text-2xl mb-5">About Me</h1>
         <div className={divClasses.join(" ")}>
-          <p className={`${paragraphClasses.join(" ")} mt-5`}>Hi, I'm Alex</p>
+          <p className={`${paragraphClasses.join(" ")} mt-5`}>Hi, I&rsquo;m Alex</p>
           <p className={paragraphClasses.join(" ")}>
             I used to be a Data Analyst, but made the transition to Software
             Engineering after spending my free time the past 2 years learning

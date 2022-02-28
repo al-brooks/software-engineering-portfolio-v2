@@ -77,27 +77,27 @@ const Header = ({ home }) => {
       {isToggled ? (
         <div className={`${styles.toggleContainer} bg-tertiary-100`}>
           <div className="mr-3">
-            <Image src="/images/light-sun-final.png" height={35} width={35} />
+            <Image src="/images/light-sun-final.png" height={35} width={35} alt={'light sun image'} />
           </div>
           <label className={styles.toggle}>
             <input type="checkbox" onChange={handleChange} />
             <span className={`${styles.slider} ${styles.round}`}></span>
           </label>
           <div className="ml-3">
-            <Image src="/images/light-moon-final.png" height={23} width={35} />
+            <Image src="/images/light-moon-final.png" height={23} width={35} alt={'light moon image'}/>
           </div>
         </div>
       ) : (
         <div className={`${styles.toggleContainer} bg-primary-100`}>
           <div className="mr-3">
-            <Image src="/images/dark-sun-final.png" height={35} width={35} />
+            <Image src="/images/dark-sun-final.png" height={35} width={35} alt={'dark sun image'} />
           </div>
           <label className={styles.toggle}>
             <input type="checkbox" onChange={handleChange} />
             <span className={`${styles.slider} ${styles.round}`}></span>
           </label>
           <div className="ml-3">
-            <Image src="/images/dark-moon-final.png" height={23} width={35} />
+            <Image src="/images/dark-moon-final.png" height={23} width={35} alt={'dark moon image'} />
           </div>
         </div>
       )}

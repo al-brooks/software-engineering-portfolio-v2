@@ -16,23 +16,23 @@ const ContactInfo = ({ size }) => {
         href="mailto:alexanderlawbrooks@gmail.com"
         className={imageClasses.join(" ")}
       >
-        <Image src="/images/gmail.png" height={size} width={size} />
+        <Image src="/images/gmail.png" height={size} width={size} alt={`gmail logo`}/>
       </a>
       <a href="https://github.com/al-brooks" className={imageClasses.join(" ")}>
-        <Image src="/images/github.png" height={size} width={size} />
+        <Image src="/images/github.png" height={size} width={size} alt={`github logo`} />
       </a>
       <a
         href="https://www.linkedin.com/in/alexander-law-brooks/"
         className={imageClasses.join(" ")}
       >
-        <Image src="/images/linkedin.png" height={size} width={size} />
+        <Image src="/images/linkedin.png" height={size} width={size} alt={`linkedin logo`} />
       </a>
       <a
         href="./images/AlexanderBrooks-Resume-20211124.png"
         download="alexander-brooks-resume"
         className={imageClasses.join(" ")}
       >
-        <Image src="/images/resume-icon-final.png" height={size} width={size} />
+        <Image src="/images/resume-icon-final.png" height={size} width={size} alt={`resume logo`}/>
       </a>
     </div>
   );

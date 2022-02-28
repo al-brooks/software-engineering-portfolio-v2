@@ -41,9 +41,9 @@ const Skills = () => {
               <div key={skill.name} className="flex flex-col items-center mx-5">
                 <h4 className="my-5 font-bold">{skill.name}</h4>
                 {skill.name === "Mongoose" ? (
-                  <Image src={skill.image} height={50} width={150} />
+                  <Image src={skill.image} height={50} width={150} alt={`${skill.image} logo`}/>
                 ) : (
-                  <Image src={skill.image} height={70} width={70} />
+                  <Image src={skill.image} height={70} width={70} alt={`${skill.image} logo`} />
                 )}
               </div>
             );

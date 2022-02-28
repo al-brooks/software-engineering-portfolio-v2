@@ -1,18 +1,7 @@
-import Link from "next/link";
 import Head from "next/head";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 
 const NotFound = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    setTimeout(() => {
-      router.push("/");
-    }, 8000);
-  }, []);
-
   return (
     <Layout>
       <Head>

@@ -83,7 +83,7 @@ const Project = ({ projectData }) => {
           <div className="my-5 w-11/12 lg:w-3/4">
             <Link href={liveCode}>
               <a>
-                <img src={image} key={image} />
+                <img src={image} key={image} alt={`${image} logo`}/>
               </a>
             </Link>
           </div>
@@ -101,9 +101,9 @@ const Project = ({ projectData }) => {
               return (
                 <div key={tech} className="ml-3">
                   {tech === "/images/mongoose-logo.jpg" ? (
-                    <Image src={tech} height={60} width={160} />
+                    <Image src={tech} height={60} width={160} alt={`${tech} logo`}/>
                   ) : (
-                    <Image src={tech} height={60} width={60} />
+                    <Image src={tech} height={60} width={60} alt={`${tech} logo`} />
                   )}
                 </div>
               );
@@ -122,7 +122,7 @@ const Project = ({ projectData }) => {
             </Link>
             <Link href={gitHub}>
               <a className={`${imageClasses.join(" ")} ml-5`}>
-                <Image src="/images/github.png" height={80} width={80} />
+                <Image src="/images/github.png" height={80} width={80} alt={`github logo`} />
               </a>
             </Link>
           </nav>
