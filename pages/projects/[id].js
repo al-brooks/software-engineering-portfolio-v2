@@ -59,6 +59,14 @@ const Project = ({ projectData }) => {
     "overflow-hidden"
   ];
 
+  const imageClasses = [
+    "p-2",
+    "hover:shadow-md",
+    "hover:shadow-tertiary-300",
+    "dark:hover:shadow-sm",
+    "dark:hover:shadow-primary-100"
+  ];
+
   const h2Classes = ["mt-5", "text-xl", "font-black"];
 
   return (
@@ -106,14 +114,14 @@ const Project = ({ projectData }) => {
           <h2 className={h2Classes.join(" ")}>Check Out My Project:</h2>
           <nav className="mt-5 mb-10 flex flex-row justify-center">
             <Link href={liveCode}>
-              <a>
+              <a className={imageClasses.join(" ")}>
                 <div className={projectLogo.join(" ")}>
                   <Image src={logo} layout="fill" alt={`${title} logo`} />
                 </div>
               </a>
             </Link>
             <Link href={gitHub}>
-              <a className="ml-5">
+              <a className={`${imageClasses.join(" ")} ml-5`}>
                 <Image src="/images/github.png" height={80} width={80} />
               </a>
             </Link>
