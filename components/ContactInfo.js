@@ -28,7 +28,7 @@ const ContactInfo = ({ size }) => {
         <Image src="/images/linkedin.png" height={size} width={size} alt={`linkedin logo`} />
       </a>
       <a
-        href="./images/AlexanderBrooks-Resume-20211124.png"
+        href="./images/alexander-brooks-resume.pdf"
         download="alexander-brooks-resume"
         className={imageClasses.join(" ")}
       >
