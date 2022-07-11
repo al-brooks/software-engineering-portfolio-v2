@@ -45,13 +45,15 @@ const Header = ({ home }) => {
         <>
           <Image
             priority
-            src="/images/profile.jpg"
+            src="/images/profile_2.jpg"
             height={200}
-            width={200}
+            width={225}
             alt="Alexander Brooks"
-            className="rounded-full"
+            className="rounded-lg"
           />
-          <h1 className="my-10 text-3xl dark:text-primary-100">Alexander Brooks</h1>
+          <h1 className="my-10 text-3xl dark:text-primary-100">
+            Alexander Brooks
+          </h1>
         </>
       ) : (
         <>
@@ -59,17 +61,19 @@ const Header = ({ home }) => {
             <a>
               <Image
                 priority
-                src="/images/profile.jpg"
+                src="/images/profile_2.jpg"
                 height={150}
-                width={150}
+                width={175}
                 alt="Alexander Brooks"
-                className="rounded-full"
+                className="rounded-lg"
               />
             </a>
           </Link>
           <Link href="/">
             <a>
-              <h2 className="my-8 text-xl dark:text-primary-100">Alexander Brooks</h2>
+              <h2 className="my-8 text-xl dark:text-primary-100">
+                Alexander Brooks
+              </h2>
             </a>
           </Link>
         </>
@@ -77,27 +81,47 @@ const Header = ({ home }) => {
       {isToggled ? (
         <div className={`${styles.toggleContainer} bg-tertiary-100`}>
           <div className="mr-3">
-            <Image src="/images/light-sun-final.png" height={35} width={35} alt={'light sun image'} />
+            <Image
+              src="/images/light-sun-final.png"
+              height={35}
+              width={35}
+              alt={"light sun image"}
+            />
           </div>
           <label className={styles.toggle}>
             <input type="checkbox" onChange={handleChange} />
             <span className={`${styles.slider} ${styles.round}`}></span>
           </label>
           <div className="ml-3">
-            <Image src="/images/light-moon-final.png" height={23} width={35} alt={'light moon image'}/>
+            <Image
+              src="/images/light-moon-final.png"
+              height={23}
+              width={35}
+              alt={"light moon image"}
+            />
           </div>
         </div>
       ) : (
         <div className={`${styles.toggleContainer} bg-primary-100`}>
           <div className="mr-3">
-            <Image src="/images/dark-sun-final.png" height={35} width={35} alt={'dark sun image'} />
+            <Image
+              src="/images/dark-sun-final.png"
+              height={35}
+              width={35}
+              alt={"dark sun image"}
+            />
           </div>
           <label className={styles.toggle}>
             <input type="checkbox" onChange={handleChange} />
             <span className={`${styles.slider} ${styles.round}`}></span>
           </label>
           <div className="ml-3">
-            <Image src="/images/dark-moon-final.png" height={23} width={35} alt={'dark moon image'} />
+            <Image
+              src="/images/dark-moon-final.png"
+              height={23}
+              width={35}
+              alt={"dark moon image"}
+            />
           </div>
         </div>
       )}

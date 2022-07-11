@@ -4,6 +4,7 @@ import Image from "next/image";
 
 const Skills = () => {
   const skills = [
+    { name: "C++", image: "/images/cpp.png" },
     { name: "HTML", image: "/images/html.png" },
     { name: "CSS", image: "/images/css.png" },
     { name: "Bootstrap", image: "/images/bootstrap.png" },
@@ -20,7 +21,7 @@ const Skills = () => {
   ];
 
   const sectionClasses = [
-      "mb-10",
+    "mb-10",
     "flex",
     "flex-col",
     "justify-center",
@@ -41,9 +42,19 @@ const Skills = () => {
               <div key={skill.name} className="flex flex-col items-center mx-5">
                 <h4 className="my-5 font-bold">{skill.name}</h4>
                 {skill.name === "Mongoose" ? (
-                  <Image src={skill.image} height={50} width={150} alt={`${skill.image} logo`}/>
+                  <Image
+                    src={skill.image}
+                    height={50}
+                    width={150}
+                    alt={`${skill.image} logo`}
+                  />
                 ) : (
-                  <Image src={skill.image} height={70} width={70} alt={`${skill.image} logo`} />
+                  <Image
+                    src={skill.image}
+                    height={70}
+                    width={70}
+                    alt={`${skill.image} logo`}
+                  />
                 )}
               </div>
             );
