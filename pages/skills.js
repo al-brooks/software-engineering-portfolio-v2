@@ -10,7 +10,7 @@ const Skills = () => {
     { name: "Bootstrap", image: "/images/bootstrap.png" },
     { name: "Sass", image: "/images/sass.png" },
     { name: "JavaScript", image: "/images/javascript.png" },
-    { name: "TypeScript", image: "/images/Typescript.png" },
+//     { name: "TypeScript", image: "/images/Typescript.png" },
     { name: "React", image: "/images/react-js.png" },
     { name: "Next", image: "/images/nextjs-logo.png" },
     { name: "Redux", image: "/images/redux.png" },
