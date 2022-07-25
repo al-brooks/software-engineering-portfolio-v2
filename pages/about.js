@@ -30,17 +30,20 @@ const About = () => {
             resources and help to those who want to learn - including me.
           </p>
           <p className={paragraphClasses.join(" ")}>
-            I’m skilled in Full Stack Web Development (feel free to check out
-            some of the technologies I’ve worked on this site), and am always
-            looking to add new tools to my set. It’s truly humbling to see all
-            of the improvements taking place with new dependencies, frameworks
-            and libraries each day and the communal interest and drive to keep
-            pressing onward to make better things.
+            I’m skilled in Full Stack Web Development, and C++ (feel free to check out
+            some of the technologies I’ve worked on this site).
+            I've been learning modern C++ this year, as well as Data Structures & Algorithms 
+            in order to round out my skills. I've been really interested in creating 
+            backend software solutions, and C++ has always been a tool that I've been interested 
+            in learning because of the nuance and complexity that comes with it. Since I'm not 
+            coming from a traditional background in Computer Science, I'm doing everything I 
+            can to be able to produce the work expected from quality engineers.
           </p>
           <p className={paragraphClasses.join(" ")}>
             Outside of tech, I have a lot of interests that inspire me. I’m
-            really into design, drawing, writing, and applying the little things
-            I learn to my own personal sites. I’m really into music - Soul, Rap,
+            really into design, drawing, and writing. It can't be understated 
+            that I LOVE animation and story telling. I'm a huge Pixar, 
+            Marvel and Anime fan. I’m really into music - Soul, Rap,
             Pop, Reggaeton, Salsa, and Bachata. I actually made a fake brand
             site for one of my favorite artists when I started to learn React
             and Redux (Also, feel free to check it out!). Also - in an
