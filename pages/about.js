@@ -34,24 +34,24 @@ const About = () => {
           <p className={paragraphClasses.join(" ")}>
             I&rsquo;m skilled in Full Stack Web Development, and C++ (feel free
             to check out some of the technologies I&rsquo;ve worked on this
-            site). I've been learning modern C++ this year, as well as Data
-            Structures & Algorithms in order to round out my skills. I've been
-            really interested in creating backend software solutions, and C++
-            has always been a tool that I've been interested in learning because
-            of the nuance and complexity that comes with it. Since I'm not
-            coming from a traditional background in Computer Science, I'm doing
-            everything I can to be able to produce the work expected from
-            quality engineers.
+            site). I&rsquo;ve been learning modern C++ this year, as well as
+            Data Structures & Algorithms in order to round out my skills.
+            I&rsquo;ve been really interested in creating backend software
+            solutions, and C++ has always been a tool that I&rsquo;ve been
+            interested in learning because of the nuance and complexity that
+            comes with it. Since I&rsquo;m not coming from a traditional
+            background in Computer Science, I&rsquo;m doing everything I can to
+            be able to produce the work expected from quality engineers.
           </p>
           <p className={paragraphClasses.join(" ")}>
             Outside of tech, I have a lot of interests that inspire me.
-            I&rsquo;m really into design, drawing, and writing. It can't be
-            understated that I LOVE animation and story telling. I'm a huge
-            Pixar, Marvel and Anime fan. I&rsquo;m really into music - Soul,
-            Rap, Pop, Reggaeton, Salsa, and Bachata. I actually made a fake
-            brand site for one of my favorite artists when I started to learn
-            React and Redux (Also, feel free to check it out!). Also - in an
-            unexpected interest pivot, I love boxing, and find martial arts
+            I&rsquo;m really into design, drawing, and writing. It can&rsquo;t
+            be understated that I LOVE animation and story telling. I&rsquo;m a
+            huge Pixar, Marvel and Anime fan. I&rsquo;m really into music -
+            Soul, Rap, Pop, Reggaeton, Salsa, and Bachata. I actually made a
+            fake brand site for one of my favorite artists when I started to
+            learn React and Redux (Also, feel free to check it out!). Also - in
+            an unexpected interest pivot, I love boxing, and find martial arts
             amazing - I&rsquo;ve even had a couple of Amatuar Boxing matches in
             college. After all is said and done, I enjoy being open to new
             experiences and learning.
